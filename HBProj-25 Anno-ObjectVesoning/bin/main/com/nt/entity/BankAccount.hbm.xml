@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	
+<!-- mapping table -->
+<hibernate-mapping>
+<class name="com.nt.entity.BankAccount" table="BANKACCOUNT"  lazy="false">
+<id name="AccNo" column="ACCNO" type="long">  
+<!-- <generator class="increment"/> -->
+</id>
+<timestamp name="LastUpdate"/>
+
+ <property name="HoloderName" type="string" length="20">
+             <column name="HOLODERNAME"/>
+         </property>
+         
+         <property name="Balance" type="double" >
+              <column name="BALANCE"/>
+         </property>
+    
+</class>
+
+</hibernate-mapping>
